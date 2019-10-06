@@ -25,7 +25,7 @@ parser = argparse.ArgumentParser()
 # Model and data
 parser.add_argument('--dataset', type=str, choices=['avletters', 'cuave', 'digits'])
 parser.add_argument('--model', type=str, choices=['cnn_mlp_baseline', 'cnn_x_mlp',
-												  'cnn_mlp_lstm_baseline', 'cnn_mlp_lstm'])
+						  'cnn_mlp_lstm_baseline', 'cnn_mlp_lstm'])
 
 # Optimization hyperparameters
 parser.add_argument('--batch_size', type=int, default=128)
