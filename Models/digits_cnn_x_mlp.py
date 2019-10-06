@@ -11,9 +11,9 @@ from data_config import data_constants
 def get_model():
 	# Dataset config
 	config = data_constants[args.dataset.lower()]
-	max_n_frames = config['max_n_frames']
-	inputCNNshape = config['lstm_inputCNNshape']
-	inputMLPshape = config['lstm_inputMLPshape']
+	min_n_frames = config['min_n_frames']
+	inputCNNshape = config['inputCNNshape']
+	inputMLPshape = config['inputMLPshape']
 	nb_classes = config['nb_classes']
 
 	# Build the CNN - pre-cross-connections
