@@ -12,7 +12,6 @@ def get_model():
 	# Dataset config
 	assert args.dataset.lower() == 'avletters'
 	config = data_constants['avletters']
-	min_n_frames = config['min_n_frames']
 	inputCNNshape = config['inputCNNshape']
 	inputMLPshape = config['inputMLPshape']
 	nb_classes = config['nb_classes']
