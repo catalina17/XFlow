@@ -10,7 +10,6 @@ from data_config import data_constants
 def get_model():
     # Dataset config
 	config = data_constants[args.dataset.lower()]
-	max_n_frames = config['max_n_frames']
 	inputCNNshape = config['lstm_inputCNNshape']
 	inputMLPshape = config['lstm_inputMLPshape']
 	nb_classes = config['nb_classes']
