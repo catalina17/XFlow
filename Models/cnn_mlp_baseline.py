@@ -3,7 +3,7 @@ from keras.layers import Dense, Dropout, Flatten
 from keras.layers import Convolution2D, MaxPooling2D, merge, Input
 from keras.layers.normalization import BatchNormalization
 
-from data_config import data_constants
+from data_config import *
 
 
 def get_model():
