@@ -4,7 +4,7 @@ from keras.layers import Convolution2D, MaxPooling2D, merge, Input
 from keras.layers import LSTM, TimeDistributed, Masking, Reshape
 from keras.layers.normalization import BatchNormalization
 
-from data_config import data_constants
+from data_config import *
 
 
 def get_model():
