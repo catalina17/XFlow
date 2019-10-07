@@ -5,7 +5,7 @@ from keras.layers import merge, Input
 from keras.layers.advanced_activations import PReLU
 from keras.layers.normalization import BatchNormalization
 
-from data_config import data_constants
+from data_config import *
 
 
 def get_model():
