@@ -6,6 +6,8 @@ import scipy.io
 import scipy.misc as misc
 import scipy.io.wavfile as wav
 
+from data_config import *
+
 # Constants for the CUAVE dataset
 min_frames = 6
 max_frames = 44
