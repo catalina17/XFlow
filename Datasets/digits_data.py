@@ -3,6 +3,8 @@ import numpy as np
 import os
 import re
 
+from data_config import *
+
 # Constants for the Digits dataset
 min_frames = 6
 max_frames = 58
