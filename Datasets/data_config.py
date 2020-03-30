@@ -1,4 +1,4 @@
-BASE_DIR = '~/'
+BASE_DIR = './'
 
 avletters_config = {
     'min_n_frames': 11,

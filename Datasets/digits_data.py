@@ -3,7 +3,7 @@ import numpy as np
 import os
 import re
 
-from data_config import *
+from Datasets.data_config import *
 
 # Constants for the Digits dataset
 min_frames = 6

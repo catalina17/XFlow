@@ -4,7 +4,7 @@ import os
 import re
 import scipy.io
 
-from data_config import *
+from Datasets.data_config import *
 
 img_path = BASE_DIR + 'avletters/Lips/'
 audio_path = BASE_DIR + 'avletters/Audio/textmfcc/'
