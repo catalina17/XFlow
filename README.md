@@ -7,7 +7,7 @@
 We propose **XFlow, cross-modal deep learning architectures** that allow for dataflow between several feature extractors. Our models derive more interpretable features and achieve better performances than models which do not exchange representations. They represent a novel method for performing cross-modality **before** features are learned from individual modalities, usefully exploiting correlations between audio and visual data, which have a different dimensionality and are nontrivially exchangeable. We also provide the research community with **Digits**, a new dataset consisting of three data types extracted from videos of people saying the digits 0-9. Results show that both cross-modal architectures outperform their baselines (by up to 11.5%) when evaluated on the AVletters, CUAVE and Digits datasets, achieving state-of-the-art results.
 
 <img src="https://github.com/catalina17/XFlow/blob/master/images/high_level.png" height=250>
-<img src="https://github.com/catalina17/XFlow/blob/master/images/xconn.png" height="350">
+<img src="https://github.com/catalina17/XFlow/blob/master/images/xconn.png" height="400">
 
 ## Getting started
 
