@@ -1,8 +1,8 @@
 # XFlow
 
-[**XFlow: Cross-modal Deep Neural Networks for Audiovisual Classification**](https://arxiv.org/abs/1709.00572)
-*[IEEE Transactions on Neural Networks and Learning Systems](https://ieeexplore.ieee.org/document/8894404), IEEE ICDL-EPIROB Workshop on Computational Models for Crossmodal Learning (CMCML) 2017, [ARM Research Summit 2017](https://developer.arm.com/research/summit/previous-summits/2017/speakers)*
-[Cătălina Cangea](www.cl.cam.ac.uk/~ccc53/), [Petar Veličković](www.cl.cam.ac.uk/~pv273/), [Pietro Liò](www.cl.cam.ac.uk/~pl219/)
+[**XFlow: Cross-modal Deep Neural Networks for Audiovisual Classification**](https://arxiv.org/abs/1709.00572)  
+*[IEEE Transactions on Neural Networks and Learning Systems](https://ieeexplore.ieee.org/document/8894404), IEEE ICDL-EPIROB Workshop on Computational Models for Crossmodal Learning (CMCML) 2017, [ARM Research Summit 2017](https://developer.arm.com/research/summit/previous-summits/2017/speakers)*  
+[Cătălina Cangea](www.cl.cam.ac.uk/~ccc53/), [Petar Veličković](www.cl.cam.ac.uk/~pv273/), [Pietro Liò](www.cl.cam.ac.uk/~pl219/)  
 
 We propose **XFlow, cross-modal deep learning architectures** that allow for dataflow between several feature extractors. Our models derive more interpretable features and achieve better performances than models which do not exchange representations. They represent a novel method for performing cross-modality **before** features are learned from individual modalities, usefully exploiting correlations between audio and visual data, which have a different dimensionality and are nontrivially exchangeable. We also provide the research community with **Digits**, a new dataset consisting of three data types extracted from videos of people saying the digits 0-9. Results show that both cross-modal architectures outperform their baselines (by up to 11.5%) when evaluated on the AVletters, CUAVE and Digits datasets, achieving state-of-the-art results.
 
