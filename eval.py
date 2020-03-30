@@ -5,20 +5,20 @@ import keras
 import numpy as np
 
 # CNN x MLP baseline and models
-import av_cnn_x_mlp
-import cnn_mlp_baseline
-import digits_cnn_x_mlp
+from Models import av_cnn_x_mlp
+from Models import cnn_mlp_baseline
+from Models import digits_cnn_x_mlp
 
 # CNN x MLP -- LSTM baseline and models
-import av_lstm_cnn_x_mlp
-import digits_lstm_cnn_x_mlp
-import lstm_cnn_mlp_baseline
+from Models import av_lstm_cnn_x_mlp
+from Models import digits_lstm_cnn_x_mlp
+from Models import lstm_cnn_mlp_baseline
 
 # Datasets
-import avletters_data
-import data_config
-import digits_data
-import cuave_data
+from Datasets import avletters_data
+from Datasets import data_config
+from Datasets import digits_data
+from Datasets import cuave_data
 
 parser = argparse.ArgumentParser()
 
@@ -69,10 +69,10 @@ if __name__=='__main__':
                   'Yi']
         if lstm_model:
             (X_image, X_audio, P, Y) = avletters_data.get_avletters_LSTM()
-            model = lstm_cnn_mlp_baseline.get_model() if baseline else av_lstm_cnn_x_mlp.get_model()
+            model = lstm_cnn_mlp_baseline.get_model(args) if baseline else av_lstm_cnn_x_mlp.get_model(args)
         else:
             (X_image, X_audio, P, Y) = avletters_data.get_avletters()
-            model = cnn_mlp_baseline.get_model() if baseline else av_cnn_x_mlp.get_model()
+            model = cnn_mlp_baseline.get_model(args) if baseline else av_cnn_x_mlp.get_model(args)
 
     elif args.dataset.lower() == 'cuave':
         people = ['s01', 's02', 's03', 's04', 's05', 's06', 's07', 's08', 's09', 's10', 's11',
@@ -82,20 +82,20 @@ if __name__=='__main__':
         if lstm_model:
             (X_image, X_audio, P, Y) = cuave_data.get_cuave_mfccs_LSTM()
 			# Digits and CUAVE have the same input dimensions
-            model = lstm_cnn_mlp_baseline.get_model() if baseline else digits_lstm_cnn_x_mlp.get_model()
+            model = lstm_cnn_mlp_baseline.get_model(args) if baseline else digits_lstm_cnn_x_mlp.get_model(args)
         else:
             (X_image, X_audio, P, Y) = cuave_data.get_cuave_mfccs()
-            model = cnn_mlp_baseline.get_model() if baseline else digits_cnn_x_mlp.get_model()
+            model = cnn_mlp_baseline.get_model(args) if baseline else digits_cnn_x_mlp.get_model(args)
 
     elif args.dataset.lower() == 'digits':
         people = ['Andreea', 'Andrej', 'Catalina', 'Costin', 'Dani', 'Edgar', 'Hugo', 'Ioana',
                   'Laura', 'Lucia', 'Milos', 'Petar', 'Razvan', 'Sisi', 'Tudor']
         if lstm_model:
             (X_image, X_audio, P, Y) = digits_data.get_digits_mfccs_LSTM()
-            model = lstm_cnn_mlp_baseline.get_model() if baseline else digits_lstm_cnn_x_mlp.get_model()
+            model = lstm_cnn_mlp_baseline.get_model(args) if baseline else digits_lstm_cnn_x_mlp.get_model(args)
         else:
             (X_image, X_audio, P, Y) = digits_data.get_digits_mfccs()
-            model = cnn_mlp_baseline.get_model() if baseline else digits_cnn_x_mlp.get_model()
+            model = cnn_mlp_baseline.get_model(args) if baseline else digits_cnn_x_mlp.get_model(args)
 
     # Cross-validation
     cvscores = []
