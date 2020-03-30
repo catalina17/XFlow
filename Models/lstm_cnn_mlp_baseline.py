@@ -4,15 +4,15 @@ from keras.layers import Convolution2D, MaxPooling2D, merge, Input
 from keras.layers import LSTM, TimeDistributed, Masking, Reshape
 from keras.layers.normalization import BatchNormalization
 
-from data_config import *
+from Datasets.data_config import *
 
 
-def get_model():
+def get_model(args):
     # Dataset config
-	config = data_constants[args.dataset.lower()]
-	inputCNNshape = config['lstm_inputCNNshape']
-	inputMLPshape = config['lstm_inputMLPshape']
-	nb_classes = config['nb_classes']
+    config = data_constants[args.dataset.lower()]
+    inputCNNshape = config['lstm_inputCNNshape']
+    inputMLPshape = config['lstm_inputMLPshape']
+    nb_classes = config['nb_classes']
 
     # Build the CNN
     inputCNN = Input(shape=inputCNNshape)

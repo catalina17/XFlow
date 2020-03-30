@@ -3,15 +3,15 @@ from keras.layers import Dense, Dropout, Flatten
 from keras.layers import Convolution2D, MaxPooling2D, merge, Input
 from keras.layers.normalization import BatchNormalization
 
-from data_config import *
+from Datasets.data_config import *
 
 
-def get_model():
-	# Dataset config
-	config = data_constants[args.dataset.lower()]
-	inputCNNshape = config['inputCNNshape']
-	inputMLPshape = config['inputMLPshape']
-	nb_classes = config['nb_classes']
+def get_model(args):
+    # Dataset config
+    config = data_constants[args.dataset.lower()]
+    inputCNNshape = config['inputCNNshape']
+    inputMLPshape = config['inputMLPshape']
+    nb_classes = config['nb_classes']
 
     # Build the CNN
     inputCNN = Input(shape=inputCNNshape)

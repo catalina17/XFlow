@@ -6,16 +6,16 @@ from keras.layers import LSTM, TimeDistributed, Masking
 from keras.layers.advanced_activations import PReLU
 from keras.layers.normalization import BatchNormalization
 
-from data_config import *
+from Datasets.data_config import *
 
 
-def get_model():
+def get_model(args):
     # Dataset config
-	assert args.dataset.lower() == 'avletters'
-	config = data_constants['avletters']
-	inputCNNshape = config['lstm_inputCNNshape']
-	inputMLPshape = config['lstm_inputMLPshape']
-	nb_classes = config['nb_classes']
+    assert args.dataset.lower() == 'avletters'
+    config = data_constants['avletters']
+    inputCNNshape = config['lstm_inputCNNshape']
+    inputMLPshape = config['lstm_inputMLPshape']
+    nb_classes = config['nb_classes']
 
     # Build the CNN - pre-cross-connections
     inputCNN = Input(shape=inputCNNshape)
